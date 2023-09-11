@@ -1,7 +1,7 @@
 @import "../../styles/responsive.scss";
 
 .navbar {
-  background-color: #fff;
+  background-color: #2a3447;
   height: 80px;
   max-width: 1240px;
   margin: auto;
@@ -21,7 +21,7 @@
   .navbar-container {
     display: flex;
     gap: 6px;
-
+    align-items: center;
     @include md {
       position: absolute;
       flex-direction: column;
@@ -29,7 +29,7 @@
       justify-content: center;
       height: 91vh;
       width: 100vw;
-      background-color: rgba(250, 208, 145, 0.486);
+      background-color: #2a3447;
       top: 9vh;
       left: 0;
       text-align: center;
@@ -45,12 +45,13 @@
       font-size: 18px;
       transition: all 0.2s linear;
       font-weight: bold;
+      color: #fff;
 
       @media screen and (max-width: $md) {
         width: 100%;
         margin: 5px 5px 35px 0px;
         padding: 20px;
-        border: 1px solid orange;
+        border: 1px solid rgb(250, 242, 228);
       }
 
       cursor: pointer;
@@ -65,9 +66,12 @@
       border: none;
       border-radius: 6px;
       cursor: pointer;
-      background-color: #0693e3;
+      background-color: #2a3447;
       color: #fff;
-      box-shadow: -1px 3px 1px rgb(206, 154, 154);
+      border: 1px solid rgb(250, 242, 228);
+      font-weight: bold;
+      font-family: "PT Sans", sans-serif;
+      font-size: 18px;
       @include md {
         border-radius: 0px;
         padding: 16px;
@@ -81,8 +85,12 @@
       }
     }
   }
-  .hamburger-icon:hover {
-    color: rgba(250, 208, 145, 0.918);
+  .hamburger-icon {
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+      color: rgba(250, 208, 145, 0.918);
+    }
   }
   @media screen and (min-width: $md) {
     .hamburger-icon {
