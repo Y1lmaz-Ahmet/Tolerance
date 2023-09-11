@@ -3,16 +3,16 @@
 .navbar {
   background-color: #2a3447;
   height: 80px;
+  margin: auto;
   max-width: 1240px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.432);
+  position: relative;
   font-family: "PT Sans", sans-serif;
-  box-shadow: 1px 2px 3px rgba(216, 214, 214, 0.959);
-
+  z-index: 9999;
   .tolerance {
     font-family: "Bai Jamjuree", sans-serif;
     color: rgba(250, 208, 145, 0.918);
@@ -45,43 +45,22 @@
       font-size: 18px;
       transition: all 0.2s linear;
       font-weight: bold;
-      color: #fff;
+      color: #ffffff;
 
       @media screen and (max-width: $md) {
         width: 100%;
-        margin: 5px 5px 35px 0px;
+        margin: 5px 18px 35px 18px;
         padding: 20px;
         border: 1px solid rgb(250, 242, 228);
+
+        &:hover {
+          background-color: #fff;
+        }
       }
 
       cursor: pointer;
       &:hover {
         color: rgba(250, 208, 145, 0.918);
-        background-color: #fff;
-      }
-    }
-
-    .navbar-item-button {
-      padding: 6px 14px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      background-color: #2a3447;
-      color: #fff;
-      border: 1px solid rgb(250, 242, 228);
-      font-weight: bold;
-      font-family: "PT Sans", sans-serif;
-      font-size: 18px;
-      @include md {
-        border-radius: 0px;
-        padding: 16px;
-      }
-      &:hover {
-        background-color: rgba(250, 208, 145, 0.918);
-      }
-      &:active {
-        transform: translateY(1px);
-        box-shadow: 0px 0px 0px orange;
       }
     }
   }

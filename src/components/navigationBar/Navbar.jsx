@@ -17,13 +17,11 @@ const Navbar = () => {
       </div>
 
       <ul className={`navbar-container ${isOpen ? "open" : ""}`}>
-        <li className='navbar-items'>Onze oplossing</li>
-        <li className='navbar-items'>Voor wie</li>
-        <li className='navbar-items'>Over ons</li>
-        <li className='navbar-items'>Nieuws</li>
-        <li className='navbar-items'>Referenties</li>
-        <li className='navbar-items'>Vacatures</li>
-        <button className='navbar-item-button'>Contact</button>
+        <li className='navbar-items'>Home</li>
+        <li className='navbar-items'>Company</li>
+        <li className='navbar-items'>Resources</li>
+        <li className='navbar-items'>About</li>
+        <li className='navbar-items'>Contact</li>
       </ul>
     </div>
   );
