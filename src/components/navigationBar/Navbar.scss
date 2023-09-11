@@ -1,0 +1,93 @@
+@import "../../styles/responsive.scss";
+
+.navbar {
+  background-color: #fff;
+  height: 80px;
+  max-width: 1240px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.432);
+  font-family: "PT Sans", sans-serif;
+  box-shadow: 1px 2px 3px rgba(216, 214, 214, 0.959);
+
+  .tolerance {
+    font-family: "Bai Jamjuree", sans-serif;
+    color: rgba(250, 208, 145, 0.918);
+    text-transform: uppercase;
+  }
+  .navbar-container {
+    display: flex;
+    gap: 6px;
+
+    @include md {
+      position: absolute;
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      height: 91vh;
+      width: 100vw;
+      background-color: rgba(250, 208, 145, 0.486);
+      top: 9vh;
+      left: 0;
+      text-align: center;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+
+      &.open {
+        transform: translateX(0);
+      }
+    }
+
+    .navbar-items {
+      font-size: 18px;
+      transition: all 0.2s linear;
+      font-weight: bold;
+
+      @media screen and (max-width: $md) {
+        width: 100%;
+        margin: 5px 5px 35px 0px;
+        padding: 20px;
+        border: 1px solid orange;
+      }
+
+      cursor: pointer;
+      &:hover {
+        color: rgba(250, 208, 145, 0.918);
+        background-color: #fff;
+      }
+    }
+
+    .navbar-item-button {
+      padding: 6px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #0693e3;
+      color: #fff;
+      box-shadow: -1px 3px 1px rgb(206, 154, 154);
+      @include md {
+        border-radius: 0px;
+        padding: 16px;
+      }
+      &:hover {
+        background-color: rgba(250, 208, 145, 0.918);
+      }
+      &:active {
+        transform: translateY(1px);
+        box-shadow: 0px 0px 0px orange;
+      }
+    }
+  }
+  .hamburger-icon:hover {
+    color: rgba(250, 208, 145, 0.918);
+  }
+  @media screen and (min-width: $md) {
+    .hamburger-icon {
+      visibility: hidden;
+      display: none;
+    }
+  }
+}
